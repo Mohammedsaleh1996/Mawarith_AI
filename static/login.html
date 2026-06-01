@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تسجيل الدخول - مفتي المواريث</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body class="login-body">
+  <form class="login-card" id="loginForm" autocomplete="on">
+    <img class="login-logo" id="loginLogo" src="/assets/logo?ts=login" alt="logo" />
+    <h1>تسجيل الدخول</h1>
+    <p>لوحة مفتي المواريث الذكي</p>
+
+    <label>اسم المستخدم
+      <input id="loginUser" name="username" autocomplete="username" value="admin" />
+    </label>
+
+    <label>كلمة المرور
+      <input id="loginPass" name="password" type="password" autocomplete="current-password" placeholder="كلمة المرور" />
+    </label>
+
+    <label class="remember-row">
+      <input id="rememberMe" type="checkbox" />
+      <span>تذكرني على هذا الجهاز</span>
+    </label>
+
+    <button id="loginBtn" type="submit">دخول</button>
+    <pre id="loginMsg" class="result-box hidden"></pre>
+    <small>المستخدم الافتراضي أول مرة: admin / admin123 — غيّر كلمة المرور من صفحة المستخدمين.</small>
+  </form>
+
+  <script>
+    const userEl = document.getElementById('loginUser');
+    const passEl = document.getElementById('loginPass');
+    const rememberEl = document.getElementById('rememberMe');
+    const msgEl = document.getElementById('loginMsg');
+    const btn = document.getElementById('loginBtn');
+
+    try {
+      const savedUser = localStorage.getItem('mawareth_login_username');
+      const remember = localStorage.getItem('mawareth_login_remember') === '1';
+      if (savedUser) userEl.value = savedUser;
+      rememberEl.checked = remember;
+    } catch(e) {}
+
+    function showLoginMsg(msg){
+      msgEl.textContent = msg || '';
+      msgEl.classList.toggle('hidden', !msg);
+    }
+
+    async function doLogin(){
+      btn.disabled = true;
+      showLoginMsg('');
+      const username = userEl.value.trim();
+      const password = passEl.value;
+      try{
+        const r = await fetch('/api/login', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          credentials: 'same-origin',
+          cache: 'no-store',
+          body: JSON.stringify({username, password, remember: rememberEl.checked})
+        });
+        if(r.ok){
+          try{
+            localStorage.setItem('mawareth_login_remember', rememberEl.checked ? '1' : '0');
+            if(rememberEl.checked) localStorage.setItem('mawareth_login_username', username);
+            else localStorage.removeItem('mawareth_login_username');
+          }catch(e){}
+          // Verify that the session cookie is usable before redirecting.
+          const me = await fetch('/api/me', {credentials:'same-origin', cache:'no-store'});
+          if(me.ok){ window.location.replace('/'); return; }
+          showLoginMsg('تم قبول بيانات الدخول لكن لم تُحفظ الجلسة. جرّب تحديث الصفحة أو امسح الكاش.');
+          btn.disabled = false;
+          return;
+        }
+        let msg='بيانات الدخول غير صحيحة';
+        try{ const j=await r.json(); if(j && (j.error || j.detail)) msg=j.error || j.detail; }catch(e){}
+        showLoginMsg(msg);
+      }catch(e){
+        showLoginMsg('تعذر الاتصال بالخادم: ' + (e.message || e));
+      }
+      btn.disabled=false;
+    }
+    document.getElementById('loginForm').addEventListener('submit', e=>{e.preventDefault();doLogin();});
+    passEl.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+    // Reload logo after browser cache/proxy loads the page.
+    document.getElementById('loginLogo').src = '/assets/logo?ts=' + Date.now();
+  </script>
+</body>
+</html>

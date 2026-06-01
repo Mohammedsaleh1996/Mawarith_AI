@@ -1,0 +1,75 @@
+{
+  "project_name": "مفتي المواريث الذكي",
+  "dashboard_host": "127.0.0.1",
+  "dashboard_port": 8088,
+  "telegram": {
+    "enabled": true,
+    "bot_token": "",
+    "poll_interval_seconds": 2,
+    "last_update_id": 830432995
+  },
+  "wapilot": {
+    "enabled": true,
+    "instance_id": "instance3952",
+    "webhook_path": "/webhook/wapilot",
+    "public_webhook_url": "https://favorable-erased-hatbox.ngrok-free.dev/webhook/wapilot",
+    "api_url_template": "https://api.wapilot.net/api/v2/{instance_id}/send-message",
+    "api_token": "",
+    "send_payload_style": "auto"
+  },
+  "runtime": {
+    "same_dialect_reply": true,
+    "safe_stop_on_advanced": true
+  },
+  "ui": {
+    "logo_title": "مفتي المواريث",
+    "logo_subtitle": "Dashboard",
+    "logo_file": "C:\\Users\\Elsaleh_Dell\\AppData\\Roaming\\MawarethAI\\Dashboard\\assets\\custom_logo.png"
+  },
+  "security": {
+    "enabled": true,
+    "session_hours": 12
+  },
+  "autostart": {
+    "enabled": true,
+    "telegram": true,
+    "whatsapp": true,
+    "ngrok": true
+  },
+  "ngrok": {
+    "enabled": true,
+    "path": "",
+    "port": 8088,
+    "public_url": "https://favorable-erased-hatbox.ngrok-free.dev",
+    "domain": "favorable-erased-hatbox.ngrok-free.dev",
+    "strict_domain": true,
+    "allow_random_fallback": false
+  },
+  "firewall": {
+    "auto_open_port": true,
+    "rule_name": "Mawareth AI Dashboard 8088"
+  },
+  "operational": {
+    "reply_mode": "active",
+    "review_large_amount_threshold": 1000000,
+    "show_processing_notice": true,
+    "daily_greeting_enabled": true,
+    "answer_preamble_enabled": true
+  },
+  "sqlserver": {
+    "enabled": true,
+    "sync_enabled": true,
+    "host": "196.219.166.54",
+    "port": "1996",
+    "database": "MawarethAI",
+    "auth_mode": "sql",
+    "username": "sa",
+    "password": "",
+    "driver": "ODBC Driver 18 for SQL Server",
+    "encrypt": true,
+    "trust_server_certificate": true,
+    "timeout_seconds": 5,
+    "sync_interval_seconds": 30,
+    "backup_dir": "C:\\MawarethAI_Backups"
+  }
+}

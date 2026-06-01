@@ -1,0 +1,44 @@
+# SQL Server Sync v31
+
+تمت إضافة طبقة مزامنة SQL Server بدون تغيير محرك المواريث.
+
+## التصميم
+- SQLite يظل مخزنًا محليًا أوليًا حتى لا يتعطل المشروع لو SQL Server فصل.
+- SQL Server يعمل كمخزن مركزي Mirror.
+- المزامنة ثنائية الاتجاه بدون حذف: SQLite -> SQL Server ثم SQL Server -> SQLite.
+- إذا فشل SQL Server، يتم تسجيل الخطأ فقط ويستمر المشروع على SQLite.
+
+## الجداول التي تُنشأ تلقائيًا
+- conversations
+- service_events
+- webhook_events
+- technical_events
+- users
+- sessions
+- notifications
+- login_attempts
+- review_items
+- sync_meta
+- sync_errors
+
+## الإعدادات
+من Dashboard > الإعدادات > SQL Server:
+- host / public static IP
+- port
+- database
+- auth mode
+- username/password
+- driver
+- encrypt / trust certificate
+- sync interval
+- backup dir
+
+## النسخ الاحتياطي
+زر Backup ينشئ:
+1. ZIP محلي من SQLite والإعدادات والسجلات.
+2. محاولة BACKUP DATABASE على SQL Server إلى backup_dir.
+
+تنبيه: مسار backup_dir يكون على جهاز SQL Server نفسه وليس جهاز الداشبورد إذا كانا مختلفين.
+
+## الاعتمادات
+تحتاج pyodbc و ODBC Driver 17 أو 18 for SQL Server على جهاز الداشبورد.

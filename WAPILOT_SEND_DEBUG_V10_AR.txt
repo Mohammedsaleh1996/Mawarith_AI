@@ -1,0 +1,42 @@
+إصلاح وتشخيص إرسال WaPilot v10
+================================
+
+المشكلة التي يعالجها هذا الإصدار:
+- الداشبورد يستقبل Webhook من WaPilot ويسجل الرسائل.
+- لكن لا يرسل الرد إلى واتساب.
+
+ما تم إضافته:
+1) تحسين دالة wapilot_send لتجربة أكثر من Header شائع:
+   Authorization: Bearer TOKEN
+   Authorization: TOKEN
+   X-API-KEY
+   x-api-key
+   X-Api-Token
+   api-token
+   token
+
+2) تجربة أكثر من صيغة Payload آمنة:
+   phone/message
+   number/message
+   mobile/message
+   to/message
+   recipient/message
+   phone/text
+   to/text
+   chatId/message
+   jid/message
+
+3) تسجيل كل محاولات الإرسال في:
+   logs/wapilot_send_attempts.jsonl
+
+4) إضافة اختبار يدوي:
+   test_wapilot_send_debug.bat
+
+طريقة التشخيص:
+- شغل run_dashboard.bat
+- تأكد أن WhatsApp enabled من الداشبورد
+- شغل test_wapilot_send_debug.bat واكتب رقمك ورسالة اختبار
+- لو فشل، افتح logs/wapilot_send_attempts.jsonl لمعرفة HTTP status ورد WaPilot
+
+مهم:
+هذا الإصلاح لا يغير محرك المواريث ولا يضيف ردود ثابتة. هو يعالج طبقة الإرسال فقط.

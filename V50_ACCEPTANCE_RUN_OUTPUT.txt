@@ -1,0 +1,16 @@
+PASSED: 312/312
+- agnatic_advanced: 1/1
+- agnatic_blocking: 2/2
+- agnatic_concept: 1/1
+- agnatic_residuary: 6/6
+- ambiguous_or_advanced: 50/50
+- calculation: 100/100
+- dialect_egyptian: 10/10
+- dialect_extra: 10/10
+- dialect_fiqh_general: 10/10
+- dialect_saudi: 10/10
+- dialect_shami: 10/10
+- fiqh: 100/100
+- fiqh_fixed_shares: 2/2
+Report written to: acceptance_report_v50.json
+All public acceptance tests passed.

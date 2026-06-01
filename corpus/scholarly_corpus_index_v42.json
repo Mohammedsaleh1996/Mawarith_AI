@@ -1,0 +1,124 @@
+{
+  "version": "v42",
+  "description": "Structured non-RAG topic index built from local mawarith references.",
+  "concepts": {
+    "hajb": {
+      "terms": [
+        "حجب",
+        "حجب الحرمان",
+        "حجب النقصان"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "tasib": {
+      "terms": [
+        "تعصيب",
+        "عاصب",
+        "عصبة",
+        "للذكر مثل حظ الانثيين"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "awl": {
+      "terms": [
+        "عول",
+        "عالت",
+        "العول"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "radd": {
+      "terms": [
+        "رد",
+        "الرد",
+        "يرد",
+        "يرد الباقي"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "umariyat": {
+      "terms": [
+        "العمرية",
+        "العمريتان",
+        "الغراوان",
+        "ثلث الباقي"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "musharaka": {
+      "terms": [
+        "المشتركة",
+        "الحمارية",
+        "اليمية"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "akdariya": {
+      "terms": [
+        "الأكدرية",
+        "اكدرية"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "munasakhat": {
+      "terms": [
+        "مناسخة",
+        "مناسخات",
+        "ثم مات",
+        "بعده مات"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "dhawu_arham": {
+      "terms": [
+        "ذوي الأرحام",
+        "ذوو الأرحام",
+        "الارحام"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "mawani": {
+      "terms": [
+        "موانع الإرث",
+        "القتل",
+        "اختلاف الدين",
+        "الرق"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "estate_rights": {
+      "terms": [
+        "الحقوق المتعلقة بالتركة",
+        "تجهيز الميت",
+        "الديون",
+        "الوصية"
+      ],
+      "total_hits": 0,
+      "sources": []
+    },
+    "heirs": {
+      "terms": [
+        "أصحاب الفروض",
+        "الزوج",
+        "الزوجة",
+        "الأب",
+        "الأم",
+        "البنت",
+        "بنت الابن",
+        "الأخ"
+      ],
+      "total_hits": 0,
+      "sources": []
+    }
+  }
+}

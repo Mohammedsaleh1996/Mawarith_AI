@@ -1,0 +1,14 @@
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.4
+python-telegram-bot==21.6
+pyodbc>=5.1.0
+PyArabic>=0.6.15
+rapidfuzz>=3.9.0
+Babel>=2.15.0
+dateparser>=1.2.0
+tenacity>=8.2.3
+httpx>=0.27.0
+APScheduler>=3.10.4
+structlog>=24.1.0
+keyring>=25.0.0

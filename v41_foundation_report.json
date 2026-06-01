@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-05-31T12:51:46",
+  "test_file": "v41_foundation_tests.jsonl",
+  "passed": 7,
+  "total": 7,
+  "failed_count": 0,
+  "per_category": {
+    "uncategorized": {
+      "passed": 7,
+      "total": 7
+    }
+  },
+  "failed": []
+}

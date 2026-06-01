@@ -1,0 +1,13 @@
+V49 Semantic Reasoner test results
+
+v49 semantic reasoner tests: PASSED 10/10
+v48 semantic/intelligence suite: PASSED
+v47 comprehensive semantic tests: PASSED 19/19
+v46 semantic concept tests: PASSED 9/9
+public acceptance tests: PASSED 312/312
+
+Main fixed class:
+- Reverse-definition questions where the target concept is described by meaning.
+- Negated features such as: ليس له سهم مقدر / بلا سهم مقدر / لا نصيب مقدر له.
+- Residuary cues such as: يأخذ الباقي / ما تبقى بعد أصحاب الفروض / كل المال إذا انفرد.
+- Preventing the engine from choosing an incidental modifier concept over the described concept.

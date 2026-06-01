@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-05-31T12:52:03",
+  "test_file": "monetary_hardening_tests_v2.jsonl",
+  "passed": 8,
+  "total": 8,
+  "failed_count": 0,
+  "per_category": {
+    "net_estate_debt_will": {
+      "passed": 1,
+      "total": 1
+    },
+    "text_amount_egyptian": {
+      "passed": 1,
+      "total": 1
+    },
+    "half_million_gulf": {
+      "passed": 1,
+      "total": 1
+    },
+    "million_and_half": {
+      "passed": 1,
+      "total": 1
+    },
+    "multiple_assets_same_currency": {
+      "passed": 1,
+      "total": 1
+    },
+    "multi_currency_safe": {
+      "passed": 1,
+      "total": 1
+    },
+    "will_limit": {
+      "passed": 1,
+      "total": 1
+    },
+    "no_false_count": {
+      "passed": 1,
+      "total": 1
+    }
+  },
+  "failed": []
+}

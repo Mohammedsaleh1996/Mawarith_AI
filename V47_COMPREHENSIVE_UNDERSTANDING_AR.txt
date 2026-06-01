@@ -1,0 +1,25 @@
+نسخة v47 — Comprehensive Mawarith Understanding
+
+الغرض:
+- معالجة مشكلة الفهم الدلالي للمصطلحات في علم المواريث.
+- عدم الاكتفاء بسؤال واحد مثل "النصيب المقدر شرعًا".
+- بناء Ontology منظمة: مفاهيم، أسماء بديلة، تعريفات، سمات دلالية، أمثلة، مصطلحات ملتبسة.
+- إدخال محرك تصنيف نوع السؤال: تعريف مباشر، تعريف عكسي، فرق بين مصطلحين، تعداد، متابعة، محادثة اجتماعية.
+
+القيود:
+- بدون RAG.
+- بدون ردود ثابتة لمسائل بعينها.
+- بدون ترك الحساب للنموذج الحر.
+- لا يجيب بتخمين عند الغموض.
+
+الملفات:
+- v47_full_understanding_engine.py
+- v47_semantic_comprehensive_tests.py
+- run_v47_comprehensive_semantic_tests.bat
+- v47_build_full_ontology.py
+- run_v47_build_full_ontology.bat
+- corpus/v47_full_scholarly_ontology.json بعد تشغيل builder
+- corpus/v47_reference_coverage_index.json بعد تشغيل builder
+
+مهم:
+هذه الطبقة لا تدعي الاعتماد الشرعي النهائي وحدها. لكنها تنقل المشروع من التقاط كلمات مفتاحية إلى فهم مصطلحي منظم داخل نطاق المواريث.

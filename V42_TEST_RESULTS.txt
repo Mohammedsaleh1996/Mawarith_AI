@@ -1,0 +1,12 @@
+V42 test summary:
+- Acceptance Tests: PASSED 312/312
+- Concept Tests: PASSED 25/25
+- V42 Full Intelligence Tests: PASSED 8/8
+
+Important manual checks:
+- السلام عليكم كيف حالك -> social reply only, no fatwa preamble.
+- كيف حالك -> status reply only, no salam injection.
+- مساء الفل -> social reply only, no unclear-question prompt.
+- ما معنى الحجب؟ -> fiqh answer with preamble.
+- ما افهم -> follow-up simplification of previous context.
+- مات شخص ثم ماتت زوجته -> safe munasakhat staged prompt, no guessing.

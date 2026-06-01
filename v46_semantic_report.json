@@ -1,0 +1,15 @@
+{
+  "version": "v46",
+  "module": "Scholarly Semantic Concept Engine",
+  "concepts_count": 28,
+  "constraints": [
+    "No RAG",
+    "No per-question fixed answer",
+    "No calculation replacement",
+    "Structured concepts + semantic matching"
+  ],
+  "tests": [
+    "v45_full_test_runner PASSED 8/8",
+    "v46_semantic_concept_tests PASSED 9/9"
+  ]
+}

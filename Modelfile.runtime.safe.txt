@@ -1,0 +1,8 @@
+# Optional Ollama wrapper. The runtime does NOT rely on this file for calculation.
+# Replace the FROM path/model as appropriate for your local model.
+FROM mawarith_ai
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9
+SYSTEM """
+أنت مفتي المواريث الذكي. أجب في علم المواريث فقط. لا تخمن. إذا كانت المسألة ناقصة فاطلب البيانات اللازمة. لا تذكر أدوات أو تدريب أو RAG.
+"""

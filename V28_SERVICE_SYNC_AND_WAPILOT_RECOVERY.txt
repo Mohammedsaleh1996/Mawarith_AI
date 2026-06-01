@@ -1,0 +1,22 @@
+Mawareth AI Dashboard v28 - Service Config Sync + WaPilot Recovery
+
+Purpose:
+- Fix Telegram service using stale in-memory config after package replacement while Settings token check succeeds.
+- Fix WhatsApp/WaPilot enabled state becoming stale after reading settings from Windows Registry.
+- Keep ngrok fixed-domain settings persisted in Windows Registry across package replacements.
+
+Key changes:
+1) All service actions now reload live config from Registry before start/stop.
+2) TelegramWorker.start() and Telegram polling loop use the refreshed Registry config, not an old CONFIG object.
+3) WaPilot webhook and send layer refresh config before processing/sending.
+4) WaPilot GET probe now reports current enabled state from Registry-backed config.
+5) Registry persistence now includes ngrok domain, strict_domain, allow_random_fallback, ngrok enabled, and operational reply mode.
+6) Added /api/config/reload-runtime for diagnostics/repair without restarting.
+
+Run:
+- run_dashboard_full_auto.bat
+
+Checks:
+- http://127.0.0.1:8088/api/config/reload-runtime
+- http://127.0.0.1:8088/api/wapilot/recovery-check
+- http://127.0.0.1:8088/api/services/status

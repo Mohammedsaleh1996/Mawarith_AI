@@ -1,0 +1,5 @@
+{"question":"السلام عليكم","must_include":["الورثة"],"kind":"smalltalk"}
+{"question":"ما هو الحجب؟","followup":"ما افهم","must_include_followup":["الحجب","مثال"],"kind":"followup"}
+{"question":"ما هي العمرية؟","followup":"ممكن مثال بالأرقام","must_include_followup":["مثال"],"kind":"followup_example"}
+{"question":"شكرا","must_include_any":["العفو","بارك","خدمتك"],"kind":"thanks"}
+{"question":"مات شخص وبعده ماتت زوجته وللزوجة المتوفية اخ وتركوا اربع بنات ومليون ريال فما توزيع التركة؟","must_include":["وفاة متتابعة","1,000,000 ريال","أخو الزوجة"],"kind":"munasakhat"}

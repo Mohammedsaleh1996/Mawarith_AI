@@ -1,0 +1,9 @@
+Dashboard Control Pack v2 fixes:
+1) Added fiqh routing for fixed shares questions, including:
+   - كم عدد الفروض المقدرة في القرآن الكريم وما هي؟
+   - ما هي الفروض المقدرة في المواريث؟
+2) Added dashboard chat keyboard behavior:
+   - Enter = send
+   - Shift + Enter = new line
+3) Added acceptance tests T301 and T302.
+4) Acceptance result: PASSED 302/302.

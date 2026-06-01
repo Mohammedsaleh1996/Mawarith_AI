@@ -1,0 +1,60 @@
+{"id": "C01", "type": "calc", "dialect": "egyptian", "question": "واحد مات وساب مراته وأمه وابنه وبنته، القسمة تبقى إزاي؟", "must_contain": ["17/36", "17/72", "1/6", "1/8"], "must_not_contain": []}
+{"id": "C02", "type": "calc", "dialect": "maghrebi", "question": "راجل توفى وخلف مراتو وامو وولدو وبنتو، شحال لكل واحد؟", "must_contain": ["17/36", "17/72", "1/6", "1/8"], "must_not_contain": []}
+{"id": "C03", "type": "calc", "dialect": "saudi", "question": "رجال توفى وخلّف أبوه وأمه وبنتين، كيف تتقسم التركة؟", "must_contain": ["2/3", "1/3", "1/6", "الأب"], "must_not_contain": []}
+{"id": "C04", "type": "calc", "dialect": "levantine", "question": "مرة توفّت وتركت زوجها وأخوين من أمها وأخت شقيقة، مين بياخد قديش؟", "must_contain": ["3/8", "1/4", "1/8", "عالت"], "must_not_contain": []}
+{"id": "C05", "type": "calc", "dialect": "msa", "question": "امرأة ماتت وخلفت زوج وبنت، كم لكل واحد؟", "must_contain": ["3/4", "1/4", "الرد"], "must_not_contain": []}
+{"id": "C06", "type": "calc", "dialect": "egyptian", "question": "راجل مات وساب زوجة وابن، القسمة؟", "must_contain": ["7/8", "1/8"], "must_not_contain": []}
+{"id": "C07", "type": "calc", "dialect": "msa", "question": "توفي رجل عن زوجة وابن وبنت، فما نصيبهم؟", "must_contain": ["7/12", "7/24", "1/8"], "must_not_contain": []}
+{"id": "C08", "type": "calc", "dialect": "gulf", "question": "ماتت حرمة وتركت زوج وابن وبنت، كيف الميراث؟", "must_contain": ["1/2", "1/4", "1/4"], "must_not_contain": []}
+{"id": "C09", "type": "calc", "dialect": "msa", "question": "توفي رجل وترك زوجة وأم وأب، فما القسمة؟", "must_contain": ["1/4", "1/4", "1/2"], "must_not_contain": []}
+{"id": "C10", "type": "calc", "dialect": "egyptian", "question": "واحدة ماتت وسابت جوزها وأمها وأبوها، الميراث إزاي؟", "must_contain": ["1/2", "1/6", "1/3"], "must_not_contain": []}
+{"id": "C11", "type": "calc", "dialect": "msa", "question": "توفي رجل عن زوجة وبنتين وأخ شقيق، فما نصيب كل منهم؟", "must_contain": ["1/8", "2/3", "5/24"], "must_not_contain": []}
+{"id": "C12", "type": "calc", "dialect": "egyptian", "question": "مات واحد وترك مرته وبنتين واخوه الشقيق، كم النصيب؟", "must_contain": ["1/8", "2/3", "5/24"], "must_not_contain": []}
+{"id": "C13", "type": "calc", "dialect": "msa", "question": "توفي رجل وترك أما وأختين شقيقتين وأخا لأب", "must_contain": ["2/3", "1/6", "الأخ لأب"], "must_not_contain": []}
+{"id": "C14", "type": "calc", "dialect": "maghrebi", "question": "راجل مات وخلا امو وجوج خوات شقيقات وخوه من الاب", "must_contain": ["2/3", "1/6", "الأخ لأب"], "must_not_contain": []}
+{"id": "C15", "type": "calc", "dialect": "msa", "question": "توفيت امرأة عن زوج وأم وأختين شقيقتين، هل فيها عول؟", "must_contain": ["3/8", "1/8", "1/2", "عالت"], "must_not_contain": []}
+{"id": "C16", "type": "calc", "dialect": "egyptian", "question": "ماتت سيدة وتركت زوجها وأمها واختين شقيقات", "must_contain": ["3/8", "1/8", "1/2", "عالت"], "must_not_contain": []}
+{"id": "C17", "type": "calc", "dialect": "msa", "question": "توفي رجل عن أم وأخ شقيق فقط", "must_contain": ["1/3", "2/3"], "must_not_contain": []}
+{"id": "C18", "type": "calc", "dialect": "egyptian", "question": "واحد مات وراه أمه وأخوه الشقيق بس", "must_contain": ["1/3", "2/3"], "must_not_contain": []}
+{"id": "C19", "type": "calc", "dialect": "msa", "question": "توفي رجل عن أب وأم وبنت", "must_contain": ["1/2", "1/6", "الأب"], "must_not_contain": []}
+{"id": "C20", "type": "calc", "dialect": "gulf", "question": "رجال مات وخلف ابوه وامه وبنية وحدة", "must_contain": ["1/2", "1/6", "الأب"], "must_not_contain": []}
+{"id": "C21", "type": "calc", "dialect": "msa", "question": "توفي رجل عن زوجة وأب وأم وبنت", "must_contain": ["1/2", "5/24", "1/6", "1/8"], "must_not_contain": []}
+{"id": "C22", "type": "calc", "dialect": "egyptian", "question": "راجل توفى وساب أب وأم وزوجة وبنت، التركة تتقسم إزاي؟", "must_contain": ["1/2", "5/24", "1/6", "1/8"], "must_not_contain": []}
+{"id": "C23", "type": "calc", "dialect": "msa", "question": "امرأة توفيت عن زوج وأخ لأم وأخت شقيقة", "must_contain": ["3/7", "1/7", "عالت"], "must_not_contain": []}
+{"id": "C24", "type": "calc", "dialect": "levantine", "question": "مرة ماتت وتركت زوجها وخوها من امها واختها الشقيقة", "must_contain": ["3/7", "1/7", "عالت"], "must_not_contain": []}
+{"id": "C25", "type": "calc", "dialect": "msa", "question": "توفي رجل عن زوجة وأخ شقيق وأخ لأب", "must_contain": ["1/4", "3/4", "محجوب"], "must_not_contain": []}
+{"id": "C26", "type": "calc", "dialect": "egyptian", "question": "مات واحد وساب مرته واخوه الشقيق واخوه من ابوه بس", "must_contain": ["1/4", "3/4", "محجوب"], "must_not_contain": []}
+{"id": "C27", "type": "calc", "dialect": "msa", "question": "توفيت امرأة عن زوج وأم وأخوين لأم", "must_contain": ["1/2", "1/6", "1/3"], "must_not_contain": []}
+{"id": "C28", "type": "calc", "dialect": "levantine", "question": "مرة توفت وتركت زوجها وامها واخوين من امها", "must_contain": ["1/2", "1/6", "1/3"], "must_not_contain": []}
+{"id": "C29", "type": "calc", "dialect": "msa", "question": "توفي رجل عن زوجة وبنت وأخ شقيق", "must_contain": ["1/8", "1/2", "3/8"], "must_not_contain": []}
+{"id": "C30", "type": "calc", "dialect": "gulf", "question": "واحد مات وخلف حرمته وبنية وخوه الشقيق", "must_contain": ["1/8", "1/2", "3/8"], "must_not_contain": []}
+{"id": "F01", "type": "fiqh", "dialect": "msa", "question": "ما معنى التعصيب في علم المواريث؟", "must_contain": ["إرث بلا سهم مقدر", "عاصب بالنفس"], "must_not_contain": []}
+{"id": "F02", "type": "fiqh", "dialect": "egyptian", "question": "يعني ايه حجب في الميراث؟", "must_contain": ["حجب حرمان", "حجب نقصان"], "must_not_contain": []}
+{"id": "F03", "type": "fiqh", "dialect": "gulf", "question": "شنو يعني الرد في الميراث؟ ومتى يصير؟", "must_contain": ["رجوع الباقي", "مثال مبسط", "بنتًا فقط"], "must_not_contain": []}
+{"id": "F04", "type": "fiqh", "dialect": "gulf", "question": "شنو العول؟", "must_contain": ["زيادة مجموع الفروض", "تنقص أنصبة"], "must_not_contain": []}
+{"id": "F05", "type": "fiqh", "dialect": "msa", "question": "ما المقصود بالكلالة؟", "must_contain": ["ليس له ولد ولا والد"], "must_not_contain": []}
+{"id": "F06", "type": "fiqh", "dialect": "msa", "question": "ما معنى الفرع الوارث؟", "must_contain": ["نسل الميت", "الابن والبنت"], "must_not_contain": []}
+{"id": "F07", "type": "fiqh", "dialect": "maghrebi", "question": "شنو الفرق بين الأخ الشقيق والأخ لأب والأخ لأم فالميراث؟", "must_contain": ["الأب والأم", "الأب فقط", "الأم فقط"], "must_not_contain": []}
+{"id": "F08", "type": "fiqh", "dialect": "sudanese", "question": "لو الزول المات عندو ديون، نقسم الورثة الأول ولا نسدد الدين؟", "must_contain": ["قبل سداد الديون", "الحقوق المتعلقة بعين التركة"], "must_not_contain": []}
+{"id": "F09", "type": "fiqh", "dialect": "msa", "question": "ما ترتيب الحقوق المتعلقة بالتركة قبل تقسيمها؟", "must_contain": ["الرهن", "تجهيز الميت", "قضاء الديون", "الوصية"], "must_not_contain": []}
+{"id": "F10", "type": "fiqh", "dialect": "msa", "question": "من هم أصحاب الفروض؟", "must_contain": ["أنصبة مقدّرة", "النصف والربع", "العصبة"], "must_not_contain": []}
+{"id": "F11", "type": "fiqh", "dialect": "egyptian", "question": "ايه الفرق بين حجب الحرمان وحجب النقصان؟", "must_contain": ["حجب حرمان", "حجب نقصان"], "must_not_contain": []}
+{"id": "F12", "type": "fiqh", "dialect": "saudi", "question": "وش معنى العاصب بالغير؟", "must_contain": ["أنثى صارت عصبة", "البنت مع الابن"], "must_not_contain": []}
+{"id": "F13", "type": "fiqh", "dialect": "maghrebi", "question": "واش كيعني الرد فالتركة؟", "must_contain": ["رجوع الباقي", "عدم وجود عاصب"], "must_not_contain": []}
+{"id": "F14", "type": "fiqh", "dialect": "msa", "question": "الدين يتسدد قبل الوصية ولا بعدها؟", "must_contain": ["قضاء الديون", "الوصية الصحيحة"], "must_not_contain": []}
+{"id": "F15", "type": "fiqh", "dialect": "msa", "question": "ما معنى الإخوة لأم يرثون بالسوية؟", "must_contain": ["ذكرهم وأنثاهم سواء"], "must_not_contain": []}
+{"id": "F16", "type": "fiqh", "dialect": "egyptian", "question": "يعني ايه أصحاب الفروض؟", "must_contain": ["أنصبة مقدّرة", "النصف والربع"], "must_not_contain": []}
+{"id": "F17", "type": "fiqh", "dialect": "gulf", "question": "شنو معنى الفرع الوارث في القسمة؟", "must_contain": ["نسل الميت", "يؤثر في أنصبة الزوجين"], "must_not_contain": []}
+{"id": "F18", "type": "fiqh", "dialect": "msa", "question": "ما هو العول في مسائل المواريث؟", "must_contain": ["زيادة مجموع الفروض", "يساوي المجموع التركة"], "must_not_contain": []}
+{"id": "F19", "type": "fiqh", "dialect": "msa", "question": "هل نقسم الميراث قبل تجهيز الميت؟", "must_contain": ["تجهيز الميت", "قبل التوزيع"], "must_not_contain": []}
+{"id": "F20", "type": "fiqh", "dialect": "msa", "question": "ما الفرق بين الأخ الشقيق والأخ لأب؟", "must_contain": ["الأب والأم", "الأب فقط"], "must_not_contain": []}
+{"id": "A01", "type": "ambiguous", "dialect": "msa", "question": "مات واحد وترك اخوه، كم نصيبه؟", "must_contain": ["يحتاج توضيحًا", "شقيق، أم لأب، أم لأم"], "must_not_contain": []}
+{"id": "A02", "type": "ambiguous", "dialect": "gulf", "question": "واحد مات وعنده عيال، كيف القسمة؟", "must_contain": ["يحتاج توضيحًا", "كم ابنًا وكم بنتًا"], "must_not_contain": []}
+{"id": "A03", "type": "ambiguous", "dialect": "msa", "question": "توفي وترك أخته فقط", "must_contain": ["يحتاج توضيحًا", "شقيقة، أم لأب، أم لأم"], "must_not_contain": []}
+{"id": "A04", "type": "ambiguous", "dialect": "egyptian", "question": "ميت وراه أولاد ومراته", "must_contain": ["يحتاج توضيحًا", "كم ابنًا وكم بنتًا"], "must_not_contain": []}
+{"id": "A05", "type": "ambiguous", "dialect": "msa", "question": "رجل مات وترك زوج وزوجة", "must_contain": ["يحتاج توضيحًا", "ظهر في السؤال زوج وزوجة"], "must_not_contain": []}
+{"id": "A06", "type": "ambiguous", "dialect": "gulf", "question": "واحد توفى وخلّف اخوان", "must_contain": ["يحتاج توضيحًا", "شقيق، أم لأب، أم لأم"], "must_not_contain": []}
+{"id": "A07", "type": "ambiguous", "dialect": "msa", "question": "ماتت امرأة وعندها أخوات", "must_contain": ["يحتاج توضيحًا", "شقيقة، أم لأب، أم لأم"], "must_not_contain": []}
+{"id": "A08", "type": "ambiguous", "dialect": "sudanese", "question": "الزول مات وخلا عيال بس", "must_contain": ["يحتاج توضيحًا", "كم ابنًا وكم بنتًا"], "must_not_contain": []}
+{"id": "A09", "type": "ambiguous", "dialect": "egyptian", "question": "واحد مات وساب ذريته", "must_contain": ["يحتاج توضيحًا", "كم ابنًا وكم بنتًا"], "must_not_contain": []}
+{"id": "A10", "type": "ambiguous", "dialect": "msa", "question": "مات وترك اخوه وعياله", "must_contain": ["يحتاج توضيحًا", "كم ابنًا وكم بنتًا", "شقيق، أم لأب، أم لأم"], "must_not_contain": []}

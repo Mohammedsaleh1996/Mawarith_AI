@@ -1,0 +1,32 @@
+{"q": "السلام عليكم كيف حالك", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "كيف حالك", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "هلا", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "اهلين", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "مساء الفل", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "صباح الخير", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "شكرا", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "تمام", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "شلونك", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "عامل ايه", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "شنو اخبارك", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "يا هلا", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "مساء الورد", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "صباح الفل", "group": "social", "must_not_include": ["بسم الله الرحمن الرحيم", "اكتب السؤال بصيغة أوضح", "تحليل المسألة"]}
+{"q": "ما معنى الحجب؟", "group": "fiqh", "must_not_include": ["Internal Server Error"]}
+{"q": "وش يعني التعصيب؟", "group": "fiqh", "must_not_include": ["Internal Server Error"]}
+{"q": "شنو الرد في الميراث؟", "group": "fiqh", "must_not_include": ["Internal Server Error"]}
+{"q": "كم عدد الفروض المقدرة؟", "group": "fiqh", "must_not_include": ["Internal Server Error"]}
+{"q": "ما هي العمرية؟", "group": "fiqh", "must_not_include": ["Internal Server Error"]}
+{"q": "ما الفرق بين الأخ الشقيق والأخ لأب والأخ لأم؟", "group": "fiqh", "must_not_include": ["Internal Server Error"]}
+{"q": "ما ترتيب الحقوق المتعلقة بالتركة؟", "group": "fiqh", "must_not_include": ["Internal Server Error"]}
+{"q": "مات شخص وترك زوجة وبنت وأخ شقيق ومبلغ 100000 ريال", "group": "calculation", "must_not_include": ["Internal Server Error"]}
+{"q": "واحد مات وساب مراته وأمه وابنه وبنته والمال مية الف جنيه", "group": "calculation", "must_not_include": ["Internal Server Error"]}
+{"q": "رجال توفى وخلف أبوه وأمه وبنتين", "group": "calculation", "must_not_include": ["Internal Server Error"]}
+{"q": "مات شخص وترك 3 بنات وأم وعم ومبلغ مية ألف ريال وعليه دين عشرين ألف", "group": "calculation", "must_not_include": ["Internal Server Error"]}
+{"q": "توفي عن زوجة وبنت ابن وأخ شقيق", "group": "calculation", "must_not_include": ["Internal Server Error"]}
+{"q": "مات شخص وبعده ماتت زوجته وللزوجة المتوفية أخ وتركوا أربع بنات ومليون ريال", "group": "calculation", "must_not_include": ["Internal Server Error"]}
+{"q": "مات وترك اخوه", "group": "ambiguous", "must_include_any": ["توضيح", "حدد", "اذكر", "نوع"]}
+{"q": "واحد مات وعنده عيال", "group": "ambiguous", "must_include_any": ["توضيح", "حدد", "اذكر", "نوع"]}
+{"q": "توفي وترك أخت", "group": "ambiguous", "must_include_any": ["توضيح", "حدد", "اذكر", "نوع"]}
+{"q": "مات وترك أقاربه", "group": "ambiguous", "must_include_any": ["توضيح", "حدد", "اذكر", "نوع"]}
+{"q": "فيه ورثة كتير مش عارفهم", "group": "ambiguous", "must_include_any": ["توضيح", "حدد", "اذكر", "نوع"]}

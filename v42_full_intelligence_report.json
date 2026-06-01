@@ -1,0 +1,62 @@
+{
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "q": "السلام عليكم كيف حالك",
+      "expected": "social_greeting_status",
+      "actual": "social_greeting_status",
+      "passed": true,
+      "reply": "وعليكم السلام ورحمة الله وبركاته. الحمد لله بخير، أسأل الله أن تكون بخير."
+    },
+    {
+      "q": "كيف حالك",
+      "expected": "social_status",
+      "actual": "social_status",
+      "passed": true,
+      "reply": "الحمد لله بخير."
+    },
+    {
+      "q": "مساء الفل",
+      "expected": "social_greeting",
+      "actual": "social_greeting",
+      "passed": true,
+      "reply": "مساء النور."
+    },
+    {
+      "q": "ما معنى الحجب؟",
+      "expected": "fiqh_question",
+      "actual": "fiqh_question",
+      "passed": true,
+      "reply": ""
+    },
+    {
+      "q": "مات شخص وترك زوجة وبنت وأخ شقيق",
+      "expected": "calculation",
+      "actual": "calculation",
+      "passed": true,
+      "reply": ""
+    },
+    {
+      "q": "ما افهم",
+      "expected": "followup_simplify",
+      "actual": "followup_simplify",
+      "passed": true,
+      "reply": ""
+    },
+    {
+      "q": "هات مثال بالأرقام",
+      "expected": "followup_example",
+      "actual": "followup_example",
+      "passed": true,
+      "reply": ""
+    },
+    {
+      "q": "مات شخص ثم ماتت زوجته",
+      "expected": "advanced_or_composite",
+      "actual": "advanced_or_composite",
+      "passed": true,
+      "reply": ""
+    }
+  ]
+}

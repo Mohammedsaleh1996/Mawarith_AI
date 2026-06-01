@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-05-30T20:46:00",
+  "test_file": "acceptance_tests_public_v1.jsonl",
+  "passed": 302,
+  "total": 302,
+  "failed_count": 0,
+  "per_category": {
+    "calculation": {
+      "passed": 100,
+      "total": 100
+    },
+    "fiqh": {
+      "passed": 100,
+      "total": 100
+    },
+    "dialect_egyptian": {
+      "passed": 10,
+      "total": 10
+    },
+    "dialect_saudi": {
+      "passed": 10,
+      "total": 10
+    },
+    "dialect_shami": {
+      "passed": 10,
+      "total": 10
+    },
+    "dialect_fiqh_general": {
+      "passed": 10,
+      "total": 10
+    },
+    "dialect_extra": {
+      "passed": 10,
+      "total": 10
+    },
+    "ambiguous_or_advanced": {
+      "passed": 50,
+      "total": 50
+    },
+    "fiqh_fixed_shares": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "failed": []
+}

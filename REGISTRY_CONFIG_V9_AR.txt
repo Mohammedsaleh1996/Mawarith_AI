@@ -1,0 +1,43 @@
+Mawareth AI Dashboard - Registry Persistence v9
+==============================================
+
+الهدف:
+- حفظ Telegram Bot Token و WaPilot API Token وإعدادات التكامل خارج ملفات المشروع.
+- عند استبدال مجلد المشروع أو تنزيل نسخة جديدة، لا تحتاج لإدخال التوكنات من البداية.
+
+المسار المستخدم في Windows Registry:
+HKCU\Software\MawarethAI\Dashboard
+
+ملاحظات أمنية:
+- HKCU لا يحتاج صلاحيات Administrator.
+- ملف data/dashboard_config.json لا يخزن التوكنات الخام بعد الآن.
+- التوكنات تظهر في الداشبورد Masked فقط.
+- لا تنشر ملفات registry أو لقطات شاشة فيها التوكن.
+
+ترتيب تحميل الإعدادات:
+1) DEFAULT_CONFIG داخل الكود
+2) data/dashboard_config.json
+3) Windows Registry
+4) .env أو Environment Variables، وهي لها أولوية أعلى إذا كانت موجودة
+
+الملفات الجديدة:
+- registry_config.py
+- show_registry_status.bat
+- clear_registry_config.bat
+
+طريقة الاستخدام:
+1) شغّل الداشبورد.
+2) افتح Settings.
+3) أدخل Telegram Token و WaPilot Token وباقي إعدادات WaPilot.
+4) اضغط Save.
+5) سيتم حفظها في Registry تلقائيًا.
+6) عند تنزيل نسخة جديدة، ستقرأ نفس القيم تلقائيًا من Registry.
+
+اختبار سريع:
+شغّل:
+show_registry_status.bat
+
+حذف الإعدادات المحفوظة عمدًا:
+شغّل:
+clear_registry_config.bat
+ثم اكتب DELETE للتأكيد.

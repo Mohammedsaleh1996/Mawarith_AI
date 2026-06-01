@@ -1,0 +1,178 @@
+{
+  "schema": "v45_scholarly_rule_corpus",
+  "concepts": {
+    "hajb": {
+      "terms": [
+        "الحجب",
+        "حجب الحرمان",
+        "حجب النقصان",
+        "محجوب",
+        "يحجب"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "tasib": {
+      "terms": [
+        "التعصيب",
+        "العصبة",
+        "عاصب",
+        "باقي التركة",
+        "الباقي"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "awl": {
+      "terms": [
+        "العول",
+        "عالت",
+        "تعول"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "radd": {
+      "terms": [
+        "الرد",
+        "يرد",
+        "رد الباقي"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "umarriyatan": {
+      "terms": [
+        "العمرية",
+        "العمريتان",
+        "الغراوان",
+        "ثلث الباقي"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "mushtaraka": {
+      "terms": [
+        "المشتركة",
+        "الحمارية",
+        "اليمية"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "akdariya": {
+      "terms": [
+        "الأكدرية",
+        "اكدرية"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "munasakhat": {
+      "terms": [
+        "المناسخات",
+        "مناسخة",
+        "مات بعده",
+        "ثم مات"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "dhawu_arham": {
+      "terms": [
+        "ذوو الأرحام",
+        "ذوي الارحام",
+        "الأرحام"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "mawani": {
+      "terms": [
+        "موانع الإرث",
+        "القتل",
+        "اختلاف الدين",
+        "الرق"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "rights": {
+      "terms": [
+        "الحقوق المتعلقة بالتركة",
+        "الديون",
+        "الوصية",
+        "تجهيز الميت",
+        "الرهن"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "heirs_furud": {
+      "terms": [
+        "أصحاب الفروض",
+        "الفروض المقدرة",
+        "النصف",
+        "الربع",
+        "الثمن",
+        "السدس",
+        "الثلث",
+        "الثلثان"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "remote_agnates": {
+      "terms": [
+        "العم",
+        "ابن العم",
+        "ابن الأخ",
+        "العصبات"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    },
+    "special_cases": {
+      "terms": [
+        "الحمل",
+        "المفقود",
+        "الخنثى",
+        "التخارج"
+      ],
+      "source_hits": [],
+      "supported_as": "rule_or_concept",
+      "coverage_status": "needs_scholarly_review"
+    }
+  },
+  "safety_policy": {
+    "requires_clarification": [
+      "الأخ غير محدد الجهة",
+      "الأخت غير محددة الجهة",
+      "أولاد/عيال بلا عدد ذكور وإناث",
+      "مال بلا عملة أو قيمة صافية"
+    ],
+    "requires_madhhab_or_policy": [
+      "الجد مع الإخوة",
+      "ذوو الأرحام",
+      "الرد على الزوجين",
+      "بعض صور المناسخات",
+      "الخنثى والمفقود والحمل"
+    ],
+    "no_guessing": true,
+    "runtime_policy": "احسب فقط ما تدعمه القواعد؛ وما نقصت بياناته يُطلب توضيحه؛ وما كان خلافيًا يُطلب فيه المذهب أو السياسة المعتمدة."
+  },
+  "source_files": []
+}

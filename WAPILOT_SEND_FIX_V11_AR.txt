@@ -1,0 +1,28 @@
+إصلاح WaPilot Send v11
+======================
+
+سبب عدم الرد رغم استقبال الرسائل:
+- الويبهوك كان يستقبل الرسالة.
+- الإرسال كان يستخدم صيغ Payload/Header متعددة وغير مطابقة للمستند الذي أرسلته.
+
+الصيغة المعتمدة الآن حسب مستند WaPilot:
+Endpoint:
+https://api.wapilot.net/api/v2/{instance_id}/send-message
+
+Headers:
+token: <WAPILOT_API_TOKEN>
+Content-Type: application/json
+
+Body:
+{
+  "chat_id": "<recipient chat id>",
+  "text": "<reply text>"
+}
+
+تمت إضافة:
+- صفحة سجل أحداث كاملة.
+- صفحة تقرير أخطاء.
+- تسجيل كل استقبال Webhook وكل محاولة إرسال WaPilot بالوقت والتاريخ.
+- تصدير CSV للأحداث والأخطاء.
+- أدوات تشغيل ngrok وCloudflare Tunnel للوصول للداشبورد من أي مكان بدون استضافة.
+- تحسين responsive UI للهاتف.

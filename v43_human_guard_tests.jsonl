@@ -1,0 +1,5 @@
+{"question":"ازيك","must_include":["الحمد لله"],"must_not_include":["بسم الله","المسألة","اكتب السؤال"]}
+{"question":"بخير الحمد لله","must_include":["بخير"],"must_not_include":["بسم الله","المسائل","اكتب السؤال","والله أعلم"]}
+{"question":"الحمد لله","must_include":["بخير"],"must_not_include":["بسم الله","المسألة","اكتب السؤال"]}
+{"question":"مساء الفل","must_include":["مساء"],"must_not_include":["بسم الله","المسألة","اكتب السؤال"]}
+{"question":"ما معنى الحجب؟","must_include":["الحجب"],"must_not_include":[]}

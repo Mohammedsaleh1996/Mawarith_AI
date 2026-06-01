@@ -1,0 +1,24 @@
+# إصلاح v27 لاسترجاع WhatsApp/WaPilot بعد تشغيل ngrok تلقائيًا
+
+المشكلة التي يعالجها هذا الإصدار:
+- عند تشغيل ngrok تلقائيًا قد يحصل ngrok على رابط عشوائي.
+- لو تم حفظ هذا الرابط بدل رابط WaPilot الثابت، سيظل WaPilot يرسل إلى الرابط القديم أو رابط غير متطابق، فتتوقف رسائل الواتساب عن الوصول.
+
+ما تم تغييره:
+1. strict_domain=true افتراضيًا.
+2. إذا كان الدومين favorable-erased-hatbox.ngrok-free.dev مضبوطًا، لا يتم قبول رابط عشوائي كبديل ولا يتم حفظه كـ WaPilot webhook.
+3. تم إضافة /api/wapilot/recovery-check لتشخيص:
+   - هل WhatsApp enabled؟
+   - هل token موجود؟
+   - هل ngrok يعمل؟
+   - هل رابط webhook العام يفتح؟
+   - هل ngrok يطابق الدومين الثابت؟
+4. تم إضافة run_wapilot_recovery_check.bat.
+
+خط التشغيل الصحيح:
+1. اقفل أي ngrok يدوي مفتوح.
+2. اقفل الداشبورد القديم.
+3. شغل run_dashboard_full_auto.bat.
+4. افتح http://127.0.0.1:8088/api/wapilot/recovery-check.
+5. في WaPilot تأكد أن webhook هو:
+   https://favorable-erased-hatbox.ngrok-free.dev/webhook/wapilot

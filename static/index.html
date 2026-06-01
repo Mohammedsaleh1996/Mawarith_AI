@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة مفتي المواريث الذكي</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><img id="brandLogo" class="brand-logo-img" src="/assets/logo" alt="logo"/><div><strong id="brandTitle">مفتي المواريث</strong><span id="brandSubtitle">Dashboard</span></div></div>
+      <button class="nav active" data-view="dashboard" data-perm="dashboard">📊 الرئيسية</button>
+      <button class="nav" data-view="chat" data-perm="chat">💬 المحادثة</button>
+      <button class="nav" data-view="services" data-perm="services">⚙️ التشغيل</button>
+      <button class="nav" data-view="logs" data-perm="logs">🗂 السجلات</button>
+      <button class="nav" data-view="events" data-perm="events">🧾 الأحداث</button>
+      <button class="nav" data-view="errors" data-perm="errors">🚨 الأخطاء</button>
+      <button class="nav" data-view="remote" data-perm="remote">🌍 الوصول الخارجي</button>
+      <button class="nav" data-view="settings" data-perm="settings">🔐 الإعدادات</button>
+      <button class="nav" data-view="users" data-perm="users">👥 المستخدمون</button>
+      <button class="nav" data-view="health" data-perm="health">🟢 حالة النظام</button>
+      <button class="nav" data-view="diagnostics" data-perm="tests">🧪 اختبار شامل</button>
+      <button class="nav" data-view="conversations" data-perm="conversations">🧵 المحادثات</button>
+      <button class="nav" data-view="review" data-perm="review">✅ مراجعة المسائل</button>
+      <button class="nav" data-view="backup" data-perm="backup">💾 النسخ الاحتياطي</button>
+      <button class="nav" data-view="security" data-perm="security">🛡 الأمان</button>
+      <div class="sidebar-footer">Production Baseline<br><b>v8 + v9 wrapper</b></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>لوحة التحكم</h1>
+          <p>تشغيل، إيقاف، مراقبة، وتقارير محادثات مفتي المواريث الذكي.</p>
+        </div>
+        <div class="top-actions">
+          <span id="healthBadge" class="badge">جار الفحص...</span>
+          <div class="notify-wrap">
+            <button id="notifyBtn" class="icon-btn" title="الإشعارات">🔔<span id="notifyBadge" class="notify-badge hidden">0</span></button>
+            <div id="notifyDropdown" class="notify-dropdown hidden">
+              <div class="notify-head"><b>الإشعارات</b><button id="markNotifyRead">تحديد كمقروء</button></div>
+              <div id="notifyList" class="notify-list"></div>
+            </div>
+          </div>
+          <span id="userBadge" class="badge">—</span>
+          <button id="logoutBtn" class="secondary">خروج</button>
+          <button id="refreshBtn">تحديث</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="view active-view">
+        <div class="cards">
+          <div class="metric"><span>إجمالي المحادثات</span><b id="mTotal">0</b><i></i></div>
+          <div class="metric"><span>محادثات اليوم</span><b id="mToday">0</b><i></i></div>
+          <div class="metric"><span>تليجرام</span><b id="mTelegram">0</b><i></i></div>
+          <div class="metric"><span>واتساب</span><b id="mWhatsapp">0</b><i></i></div>
+          <div class="metric"><span>مسائل حسابية</span><b id="mCalc">0</b><i></i></div>
+          <div class="metric"><span>توضيحات/إيقاف آمن</span><b id="mClarify">0</b><i></i></div>
+        </div>
+
+        <div class="grid two">
+          <div class="panel">
+            <div class="panel-head"><h2>محادثات آخر 7 أيام</h2><span>Daily</span></div>
+            <canvas id="dailyChart" height="170"></canvas>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>حالة التشغيل</h2><span>Live</span></div>
+            <div class="status-grid">
+              <div class="status-card"><span>Dashboard/API</span><b id="sProject">—</b></div>
+              <div class="status-card"><span>Telegram</span><b id="sTelegram">—</b></div>
+              <div class="status-card"><span>WhatsApp</span><b id="sWhatsapp">—</b></div>
+              <div class="status-card"><span>SQL Server</span><b id="sSqlServer">—</b><small id="sSqlServerSync">—</small></div>
+              <div class="status-card"><span>متوسط الرد</span><b id="mAvg">0ms</b></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>آخر المحادثات</h2><button data-view-jump="logs">عرض السجلات</button></div>
+          <div id="recentList" class="recent-list"></div>
+        </div>
+      </section>
+
+      <section id="chat" class="view">
+        <div class="panel chat-panel">
+          <div class="panel-head"><h2>جرّب مفتي المواريث الذكي</h2><span>Dashboard Chat</span></div>
+          <div id="chatBox" class="chat-box">
+            <div class="msg bot">اكتب مسألة ميراث أو سؤال فقهي. لو السؤال ناقص، النظام هيسأل توضيح بدل التخمين.</div>
+          </div>
+          <div class="chat-input">
+            <textarea id="chatInput" placeholder="مثال: واحد مات وساب مراته وأمه وابنه وبنته، القسمة تبقى إزاي؟"></textarea>
+            <button id="sendChatBtn">إرسال</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="view">
+        <div class="grid three">
+          <div class="panel service-panel">
+            <h2>المشروع كامل</h2>
+            <p>تشغيل/إيقاف تليجرام + واتساب من مكان واحد. التشغيل التلقائي يبدأ الخدمات مع الداشبورد.</p>
+            <div class="btn-row"><button data-service="all" data-action="start">تشغيل الكل</button><button class="danger" data-service="all" data-action="stop">إيقاف الكل</button></div>
+          </div>
+          <div class="panel service-panel">
+            <h2>Telegram</h2>
+            <p id="telegramStatusText">—</p>
+            <div class="btn-row"><button data-service="telegram" data-action="start">تشغيل تليجرام</button><button class="danger" data-service="telegram" data-action="stop">إيقاف تليجرام</button></div>
+          </div>
+          <div class="panel service-panel">
+            <h2>WhatsApp / WaPilot</h2>
+            <p id="whatsappStatusText">—</p>
+            <div class="btn-row"><button data-service="whatsapp" data-action="start">تشغيل واتساب</button><button class="danger" data-service="whatsapp" data-action="stop">إيقاف واتساب</button></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>وضع واتساب</h2><span>Monitor / Active</span></div>
+          <p class="muted-block">وضع المراقبة يستقبل ويسجل الرسائل ولا يرسل ردًا. وضع التشغيل يرد تلقائيًا.</p>
+          <select id="replyMode"><option value="active">تشغيل فعلي: استقبال ورد تلقائي</option><option value="monitor">مراقبة فقط: استقبال بدون رد</option></select>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>اختبار إرسال WaPilot</h2><span>اختياري</span></div>
+          <div class="form-grid">
+            <label>رقم المستلم<input id="testWaTo" placeholder="مثال: 9665xxxxxxx" /></label>
+            <label>الرسالة<input id="testWaMsg" value="اختبار من مفتي المواريث الذكي" /></label>
+          </div>
+          <button id="testWaBtn">إرسال اختبار</button>
+          <pre id="testWaResult" class="result-box"></pre>
+        </div>
+      </section>
+
+      <section id="logs" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>سجل المحادثات اليومية</h2><a class="button-link" href="/api/export/logs.csv">تصدير CSV</a></div>
+          <div class="filters">
+            <select id="logChannel"><option value="">كل القنوات</option><option>dashboard</option><option>telegram</option><option>whatsapp</option><option>api</option></select>
+            <input id="logDate" class="date-input" type="date" lang="en" dir="ltr" title="اختر التاريخ" aria-label="تاريخ السجلات" />
+            <button id="loadLogsBtn">تحميل</button>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>الوقت</th><th>القناة</th><th>السؤال</th><th>الرد</th><th>النوع</th><th>زمن</th></tr></thead><tbody id="logsTable"></tbody></table></div>
+        </div>
+      </section>
+
+
+      <section id="events" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>سجل الأحداث الكامل</h2><a class="button-link" href="/api/export/events.csv">تصدير CSV</a></div>
+          <p class="muted-block">هنا يظهر كل حدث فني بالوقت والتاريخ: استقبال Webhook، محاولة إرسال WaPilot، تشغيل/إيقاف الخدمات، وأي تشخيص داخلي.</p>
+          <div class="filters">
+            <select id="eventLevel"><option value="">كل المستويات</option><option value="info">info</option><option value="warning">warning</option><option value="error">error</option><option value="critical">critical</option></select>
+            <select id="eventComponent"><option value="">كل المكونات</option><option value="dashboard">dashboard</option><option value="wapilot">wapilot</option><option value="telegram">telegram</option><option value="whatsapp">whatsapp</option></select>
+            <input id="eventDate" class="date-input" type="date" lang="en" dir="ltr" title="اختر التاريخ" aria-label="تاريخ الأحداث" />
+            <button id="loadEventsBtn">تحميل الأحداث</button>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>الوقت</th><th>المستوى</th><th>المكوّن</th><th>الحدث</th><th>الرسالة</th></tr></thead><tbody id="eventsTable"></tbody></table></div>
+        </div>
+      </section>
+
+      <section id="errors" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>تقرير الأخطاء</h2><a class="button-link" href="/api/export/errors.csv">تصدير الأخطاء CSV</a></div>
+          <p class="muted-block">أي فشل إرسال، استثناء داخلي، خطأ Webhook، أو مشكلة API تظهر هنا مباشرة.</p>
+          <div class="filters">
+            <input id="errorDate" class="date-input" type="date" lang="en" dir="ltr" title="اختر التاريخ" aria-label="تاريخ الأخطاء" />
+            <button id="loadErrorsBtn">تحميل الأخطاء</button>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>الوقت</th><th>المكوّن</th><th>الحدث</th><th>الخطأ</th></tr></thead><tbody id="errorsTable"></tbody></table></div>
+        </div>
+      </section>
+
+      <section id="remote" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>الوصول للداشبورد من أي مكان</h2><span>Free Tunnel</span></div>
+          <p class="muted-block">بدون استضافة وبدون اشتراك مدفوع: شغّل الداشبورد محليًا ثم افتح نفق مجاني. الرابط المجاني غالبًا يتغير عند إعادة التشغيل.</p>
+          <div class="remote-cards">
+            <div class="status-card"><span>ngrok</span><b>ngrok http 8088</b><p>سهل وسريع. استخدم رابط HTTPS الناتج للدخول للداشبورد ومنه أضف /webhook/wapilot للويبهوك.</p></div>
+            <div class="status-card"><span>Cloudflare Quick Tunnel</span><b>cloudflared tunnel --url http://localhost:8088</b><p>بديل مجاني للتجربة. يحتاج تنزيل cloudflared فقط.</p></div>
+          </div>
+          <button id="loadRemoteBtn">عرض بيانات الوصول الحالية</button>
+          <pre id="remoteInfo" class="result-box"></pre>
+        </div>
+      </section>
+
+
+      <section id="users" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>المستخدمون والصلاحيات</h2><span>Access Control</span></div>
+          <p class="muted-block">كل صلاحية تظهر/تخفي ميزة من الواجهة، والسيرفر نفسه يمنع الوصول للـ API بدون الصلاحية المناسبة.</p>
+          <div class="grid two">
+            <div>
+              <h3>إضافة/تعديل مستخدم</h3>
+              <div class="form-grid">
+                <label>Username <input id="userUsername" placeholder="مثال: operator1" /></label>
+                <label>الاسم الظاهر <input id="userDisplay" placeholder="مشرف التشغيل" /></label>
+                <label>كلمة المرور <input id="userPassword" type="password" placeholder="مطلوبة للجديد، اختيارية عند التعديل" /></label>
+                <label>الدور <select id="userRole"><option value="viewer">viewer</option><option value="operator">operator</option><option value="admin">admin</option></select></label>
+                <label><input id="userActive" type="checkbox" checked /> نشط</label>
+              </div>
+              <div id="permissionChecks" class="permission-grid"></div>
+              <button id="saveUserBtn">حفظ المستخدم</button>
+              <pre id="userResult" class="result-box"></pre>
+            </div>
+            <div>
+              <h3>قائمة المستخدمين</h3>
+              <div class="table-wrap"><table><thead><tr><th>المستخدم</th><th>الدور</th><th>نشط</th><th>الصلاحيات</th><th>إجراء</th></tr></thead><tbody id="usersTable"></tbody></table></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="health" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>حالة النظام</h2><button id="loadHealthBtn">تحديث الحالة</button></div>
+          <div id="healthGrid" class="status-grid"></div>
+          <pre id="healthDetails" class="result-box"></pre>
+        </div>
+      </section>
+
+      <section id="diagnostics" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>اختبار النظام الشامل</h2><span>Runtime + DB + integrations</span></div>
+          <p class="muted-block">يشغّل فحوصات آمنة بدون إرسال رسائل خارجية إلا إذا استخدمت زر اختبار WaPilot يدويًا.</p>
+          <button id="runSystemTestBtn">تشغيل الاختبار الآن</button>
+          <div id="systemTestResults" class="test-results"></div>
+        </div>
+      </section>
+
+      <section id="conversations" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>إدارة المحادثات</h2><span>Threads</span></div>
+          <div class="filters">
+            <select id="threadChannel"><option value="">كل القنوات</option><option>dashboard</option><option>telegram</option><option>whatsapp</option><option>api</option></select>
+            <input id="threadSearch" placeholder="بحث في المحادثات أو رقم المستخدم" />
+            <button id="loadThreadsBtn">بحث</button>
+          </div>
+          <div class="grid two">
+            <div class="table-wrap"><table><thead><tr><th>المستخدم/المحادثة</th><th>رقم الجوال</th><th>كود الدولة</th><th>القناة</th><th>آخر وقت</th><th>عدد</th></tr></thead><tbody id="threadsTable"></tbody></table></div>
+            <div class="thread-detail" id="threadDetail">اختر محادثة لعرض تفاصيلها.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="review" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>مراجعة المسائل</h2><span>Quality Gate</span></div>
+          <p class="muted-block">تعرض المسائل الغامضة أو المتقدمة أو التي طلب المستخدم تبسيطًا لها، بدون تغيير المحرك أو إضافة ردود محفوظة.</p>
+          <div class="filters">
+            <select id="reviewStatus"><option value="pending">قيد المراجعة</option><option value="">كل الحالات</option><option value="correct">صحيح</option><option value="needs_fix">يحتاج تعديل</option><option value="wrong">خطأ</option><option value="reviewed">تمت المراجعة</option></select>
+            <button id="loadReviewBtn">تحميل</button>
+          </div>
+          <div id="reviewList" class="review-list"></div>
+        </div>
+      </section>
+
+      <section id="backup" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>النسخ الاحتياطي والاستعادة</h2><span>Backup / Restore</span></div>
+          <p class="muted-block">التصدير الافتراضي لا يضم التوكنات. فعّل خيار التوكنات فقط لو ستحتفظ بالملف في مكان آمن.</p>
+          <label><input id="backupIncludeSecrets" type="checkbox" /> تضمين التوكنات داخل النسخة الاحتياطية</label>
+          <div class="btn-row"><button id="downloadBackupBtn">تصدير نسخة احتياطية</button></div>
+          <hr />
+          <h3>استيراد نسخة احتياطية</h3>
+          <input id="backupFile" type="file" accept="application/json,.json" />
+          <button id="importBackupBtn">استيراد</button>
+          <pre id="backupResult" class="result-box"></pre>
+        </div>
+      </section>
+
+      <section id="security" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>الأمان ومحاولات الدخول</h2><button id="loadLoginAttemptsBtn">تحديث</button></div>
+          <div class="form-grid">
+            <label>كلمة المرور الحالية <input id="currentPassword" type="password" /></label>
+            <label>كلمة المرور الجديدة <input id="newPassword" type="password" /></label>
+          </div>
+          <button id="changePasswordBtn">تغيير كلمة المرور</button>
+          <pre id="passwordResult" class="result-box"></pre>
+          <h3>آخر محاولات الدخول</h3>
+          <div class="table-wrap"><table><thead><tr><th>الوقت</th><th>المستخدم</th><th>النتيجة</th><th>IP</th><th>ملاحظة</th></tr></thead><tbody id="loginAttemptsTable"></tbody></table></div>
+        </div>
+      </section>
+
+      <section id="settings" class="view">
+        <div class="panel">
+          <div class="panel-head"><h2>الإعدادات والتوكنات</h2><span>محليًا فقط</span></div>
+          <div class="settings-note">لا تشارك التوكنات علنًا. بعد لصق أي Token في محادثة أو مكان عام، الأفضل تغييره من مزوّد الخدمة.</div>
+          <form id="settingsForm">
+            <h3>Telegram</h3>
+            <div class="form-grid">
+              <label>Bot Token <input id="telegramToken" type="password" placeholder="اتركه فارغًا للحفاظ على الحالي" autocomplete="off" /></label>
+              <label>Token الحالي <input id="telegramMasked" disabled /></label>
+            </div>
+            <p class="muted-block small-help">توكن Telegram الصحيح من BotFather يكون بصيغة تشبه: <b>1234567890:AA...</b>. لا تضع API ID أو API Hash.</p>
+            <div class="btn-row"><button type="button" id="checkTelegramBtn" class="secondary">فحص توكن تليجرام</button></div>
+            <pre id="telegramCheckResult" class="result-box"></pre>
+            <h3>WaPilot / WhatsApp</h3>
+            <div class="form-grid">
+              <label>Instance ID <input id="waInstance" /></label>
+              <label>Webhook Path <input id="waWebhookPath" /></label>
+              <label>Public Webhook URL <input id="waPublicWebhook" /></label>
+              <label>API URL Template <input id="waApiUrl" /></label>
+              <label>API Token <input id="waToken" type="password" placeholder="اتركه فارغًا للحفاظ على الحالي" /></label>
+              <label>Token الحالي <input id="waMasked" disabled /></label>
+            </div>
+
+            <h3>SQL Server / قاعدة البيانات المركزية</h3>
+            <div class="settings-note">SQLite يظل مخزنًا محليًا آمنًا. عند تفعيل SQL Server يتم إنشاء القاعدة والجداول تلقائيًا ثم مزامنة البيانات بدون تعطيل المشروع إذا انقطع السيرفر.</div>
+            <div class="form-grid checks">
+              <label><input id="sqlEnabled" type="checkbox" /> تفعيل SQL Server</label>
+              <label><input id="sqlSyncEnabled" type="checkbox" /> تفعيل المزامنة التلقائية مع SQLite</label>
+              <label>Public IP / Host <input id="sqlHost" placeholder="مثال: 203.0.113.10 أو server.example.com" /></label>
+              <label>Port <input id="sqlPort" placeholder="1433" /></label>
+              <label>Database <input id="sqlDatabase" placeholder="MawarethAI" /></label>
+              <label>Authentication
+                <select id="sqlAuthMode"><option value="sql">SQL Username/Password</option><option value="windows">Windows Integrated</option></select>
+              </label>
+              <label>Username <input id="sqlUsername" autocomplete="off" /></label>
+              <label>Password <input id="sqlPassword" type="password" placeholder="اتركه فارغًا للحفاظ على الحالي" autocomplete="off" /></label>
+              <label>Password الحالي <input id="sqlPasswordMasked" disabled /></label>
+              <label>ODBC Driver <input id="sqlDriver" placeholder="ODBC Driver 18 for SQL Server" /></label>
+              <label><input id="sqlEncrypt" type="checkbox" /> Encrypt</label>
+              <label><input id="sqlTrustCert" type="checkbox" /> Trust Server Certificate</label>
+              <label>Connection Timeout ثواني <input id="sqlTimeout" type="number" min="1" max="60" /></label>
+              <label>Sync interval ثواني <input id="sqlSyncInterval" type="number" min="10" max="3600" /></label>
+              <label>SQL Backup dir على جهاز السيرفر <input id="sqlBackupDir" placeholder="C:\MawarethAI_Backups" /></label>
+            </div>
+            <div class="btn-row">
+              <button type="button" id="sqlTestBtn" class="secondary">فحص الاتصال</button>
+              <button type="button" id="sqlInitBtn" class="secondary">إنشاء القاعدة والجداول</button>
+              <button type="button" id="sqlSyncNowBtn" class="secondary">مزامنة الآن</button>
+              <button type="button" id="sqlBackupBtn" class="secondary">Backup الآن</button>
+            </div>
+            <pre id="sqlResult" class="result-box"></pre>
+
+            <h3>الشعار والواجهة</h3>
+            <div class="form-grid">
+              <label>عنوان الشعار <input id="logoTitle" placeholder="مفتي المواريث" /></label>
+              <label>وصف صغير <input id="logoSubtitle" placeholder="Dashboard" /></label>
+              <label>رفع شعار جديد <input id="logoFile" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" /></label>
+              <div><img id="logoPreview" class="logo-preview" src="/assets/logo" alt="logo preview" /></div>
+            </div>
+            <h3>التشغيل التلقائي</h3>
+            <div class="form-grid checks">
+              <label><input id="autoEnabled" type="checkbox" /> تشغيل تلقائي عند فتح الداشبورد</label>
+              <label><input id="autoTelegram" type="checkbox" /> تشغيل Telegram تلقائيًا</label>
+              <label><input id="autoWhatsapp" type="checkbox" /> تشغيل WhatsApp تلقائيًا</label>
+              <label><input id="autoNgrok" type="checkbox" /> تشغيل ngrok تلقائيًا</label>
+              <label>مسار ngrok.exe اختياري <input id="ngrokPath" placeholder="C:\ngrok\ngrok.exe" /></label>
+            </div>
+            <button type="submit">حفظ الإعدادات</button>
+            <pre id="settingsResult" class="result-box"></pre>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+  <script src="/static/sqlserver_buttons_fix.js"></script>
+</body>
+</html>

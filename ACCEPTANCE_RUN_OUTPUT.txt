@@ -1,0 +1,11 @@
+PASSED: 300/300
+- ambiguous_or_advanced: 50/50
+- calculation: 100/100
+- dialect_egyptian: 10/10
+- dialect_extra: 10/10
+- dialect_fiqh_general: 10/10
+- dialect_saudi: 10/10
+- dialect_shami: 10/10
+- fiqh: 100/100
+Report written to: acceptance_report_public_v1.json
+All public acceptance tests passed.

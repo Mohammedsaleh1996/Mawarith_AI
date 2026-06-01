@@ -1,0 +1,461 @@
+{
+  "fard": {
+    "canonical": "الفَرْض",
+    "matches": 869,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "DASHBOARD_V2_FIXES.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "INTERNET_RESEARCH_NOTES_V42_AR.txt",
+      "INTERNET_RESEARCH_NOTES_V45_AR.txt"
+    ]
+  },
+  "fixed_shares": {
+    "canonical": "الفروض المقدّرة",
+    "matches": 1740,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "DASHBOARD_V2_FIXES.txt",
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "ashab_furud": {
+    "canonical": "أصحاب الفروض",
+    "matches": 98,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "awl": {
+    "canonical": "العَوْل",
+    "matches": 261,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "INTERNET_RESEARCH_NOTES_V41_AR.txt",
+      "INTERNET_RESEARCH_NOTES_V42_AR.txt",
+      "INTERNET_RESEARCH_NOTES_V45_AR.txt"
+    ]
+  },
+  "radd": {
+    "canonical": "الرَّد",
+    "matches": 137,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "DYNAMIC_FIQH_ENGINE_V3.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "WAPILOT_SEND_DEBUG_V10_AR.txt",
+      "WAPILOT_SEND_FIX_V11_AR.txt"
+    ]
+  },
+  "hajb": {
+    "canonical": "الحَجْب",
+    "matches": 518,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "INTERNET_RESEARCH_NOTES_V41_AR.txt",
+      "INTERNET_RESEARCH_NOTES_V42_AR.txt"
+    ]
+  },
+  "hajb_hirman": {
+    "canonical": "حجب الحرمان",
+    "matches": 485,
+    "source_files_seen": [
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_18_مجلة_الأبحاث_الفقهية_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "hajb_nuqsan": {
+    "canonical": "حجب النقصان",
+    "matches": 6,
+    "source_files_seen": [
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "tasib": {
+    "canonical": "التعصيب",
+    "matches": 457,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "asaba_binafs": {
+    "canonical": "العاصب بالنفس",
+    "matches": 324,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "asaba_bilghayr": {
+    "canonical": "العاصب بالغير",
+    "matches": 3,
+    "source_files_seen": [
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_2_الألغاز_الفقهية_نهائي_بعد_المقارنة(3).txt"
+    ]
+  },
+  "asaba_maalghayr": {
+    "canonical": "العاصب مع الغير",
+    "matches": 17,
+    "source_files_seen": [
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_18_مجلة_الأبحاث_الفقهية_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_1_الأحكام_الفرضية_نهائي_بعد_المقارنة(5).txt"
+    ]
+  },
+  "umariyya": {
+    "canonical": "العُمَرِيَّتان / الغَرَّاوَان",
+    "matches": 37,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "DYNAMIC_FIQH_ENGINE_V3.txt",
+      "DASHBOARD_V23_UI_TELEGRAM_CONCEPT_FIX_AR.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "mushtaraka": {
+    "canonical": "المُشْتَرَكة / الحِمَارِيَّة",
+    "matches": 1683,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "V35_CONTEXT_MUNASAKHAT_GREETING_AR.txt",
+      "V42_TEST_RESULTS.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "akdariyya": {
+    "canonical": "الأكدرية",
+    "matches": 2693,
+    "source_files_seen": [
+      "README_AR.txt",
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "MONETARY_DISTRIBUTION_FIX_V6.txt",
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt"
+    ]
+  },
+  "jadd_with_siblings": {
+    "canonical": "الجد مع الإخوة",
+    "matches": 478,
+    "source_files_seen": [
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_18_مجلة_الأبحاث_الفقهية_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "dhawu_arham": {
+    "canonical": "ذوو الأرحام",
+    "matches": 905,
+    "source_files_seen": [
+      "REGISTRY_CONFIG_V9_AR.txt",
+      "DASHBOARD_V21_LOGIN_LOGO_REMEMBER_FIX_AR.txt",
+      "V47_COMPREHENSIVE_UNDERSTANDING_AR.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "munasakhat": {
+    "canonical": "المناسخات",
+    "matches": 72,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "V35_CONTEXT_MUNASAKHAT_GREETING_AR.txt",
+      "V36_HUMAN_CONVERSATION_LAYER_AR.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "V45_FULL_SCHOLARLY_PRODUCTION_AR.txt"
+    ]
+  },
+  "takharuj": {
+    "canonical": "التخارج",
+    "matches": 389,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt"
+    ]
+  },
+  "kalala": {
+    "canonical": "الكَلالة",
+    "matches": 542,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "estate_rights": {
+    "canonical": "الحقوق المتعلقة بالتركة",
+    "matches": 91,
+    "source_files_seen": [
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "will": {
+    "canonical": "الوصية",
+    "matches": 730,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "debt": {
+    "canonical": "الدَّين",
+    "matches": 3529,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt",
+      "DASHBOARD_V23_UI_TELEGRAM_CONCEPT_FIX_AR.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "causes": {
+    "canonical": "أسباب الإرث",
+    "matches": 619,
+    "source_files_seen": [
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "conditions": {
+    "canonical": "شروط الإرث",
+    "matches": 55,
+    "source_files_seen": [
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_18_مجلة_الأبحاث_الفقهية_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_6_القضاء_بالمقاصد_الشرعية_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "impediments": {
+    "canonical": "موانع الإرث",
+    "matches": 498,
+    "source_files_seen": [
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "asl_masala": {
+    "canonical": "تأصيل المسألة",
+    "matches": 2,
+    "source_files_seen": [
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "tashih": {
+    "canonical": "تصحيح المسألة",
+    "matches": 12,
+    "source_files_seen": [
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "siham": {
+    "canonical": "السِّهام",
+    "matches": 433,
+    "source_files_seen": [
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt",
+      "V46_IMPLEMENTATION_SCOPE_AR.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "husband": {
+    "canonical": "الزوج",
+    "matches": 1435,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "V35_CONTEXT_MUNASAKHAT_GREETING_AR.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "wife": {
+    "canonical": "الزوجة",
+    "matches": 660,
+    "source_files_seen": [
+      "README_AR.txt",
+      "README_DASHBOARD_AR.txt",
+      "V35_CONTEXT_MUNASAKHAT_GREETING_AR.txt",
+      "V42_TEST_RESULTS.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "father": {
+    "canonical": "الأب",
+    "matches": 1526,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "mother": {
+    "canonical": "الأم",
+    "matches": 2968,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "DYNAMIC_FIQH_ENGINE_V3.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "MONETARY_DISTRIBUTION_FIX_V6.txt",
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt"
+    ]
+  },
+  "son": {
+    "canonical": "الابن",
+    "matches": 3157,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "V43_TRUE_SOCIAL_STATE_GUARD_AR.txt",
+      "V45_FULL_SCHOLARLY_PRODUCTION_AR.txt"
+    ]
+  },
+  "daughter": {
+    "canonical": "البنت",
+    "matches": 1436,
+    "source_files_seen": [
+      "README_AR.txt",
+      "README_DASHBOARD_AR.txt",
+      "MONETARY_DISTRIBUTION_FIX_V6.txt",
+      "V41_CORE_INTELLIGENCE_FOUNDATION_AR.txt",
+      "V45_FULL_SCHOLARLY_PRODUCTION_AR.txt"
+    ]
+  },
+  "sons_son": {
+    "canonical": "ابن الابن",
+    "matches": 307,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "sons_daughter": {
+    "canonical": "بنت الابن",
+    "matches": 87,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_18_مجلة_الأبحاث_الفقهية_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "full_brother": {
+    "canonical": "الأخ الشقيق",
+    "matches": 44,
+    "source_files_seen": [
+      "README_AR.txt",
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "paternal_brother": {
+    "canonical": "الأخ لأب",
+    "matches": 43,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt"
+    ]
+  },
+  "maternal_sibling": {
+    "canonical": "الأخ أو الأخت لأم",
+    "matches": 1055,
+    "source_files_seen": [
+      "HARDENING_V7_FINANCIAL_AND_PRODUCTION_NOTES.txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "uncle": {
+    "canonical": "العَمّ",
+    "matches": 1398,
+    "source_files_seen": [
+      "README_AR.txt",
+      "README_DASHBOARD_AR.txt",
+      "DYNAMIC_FIQH_ENGINE_V3.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "MONETARY_DISTRIBUTION_FIX_V6.txt"
+    ]
+  },
+  "cousin": {
+    "canonical": "ابن العم",
+    "matches": 507,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "AGNATIC_RESIDUARY_FIX_V5.txt",
+      "المرحلة_11_طبقات_الفرضيين_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_12_طبقات_الفرضيين_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt"
+    ]
+  },
+  "grandmother": {
+    "canonical": "الجَدَّة",
+    "matches": 814,
+    "source_files_seen": [
+      "README_DASHBOARD_AR.txt",
+      "المرحلة_14_فقه_ومواريث_المجلد_الثالث_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_13_فقه_ومواريث_المجلد_الأول_نهائي_بعد_المقارنة(5).txt",
+      "المرحلة_15_فقه_ومواريث_المجلد_الثاني_نهائي_بعد_المقارنة(4).txt",
+      "المرحلة_16_فقه_ومواريث_المجلد_الرابع_نهائي_بعد_المقارنة(4).txt"
+    ]
+  }
+}
