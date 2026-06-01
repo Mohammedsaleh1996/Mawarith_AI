@@ -1,2 +1,14 @@
-fastapi>=0.110.0
-uvicorn>=0.27.0
+llama-cpp-python
+langchain
+langchain-community
+chromadb
+sentence-transformers
+arabic-reshaper
+python-bidi
+pandas
+numpy
+streamlit
+fastapi
+uvicorn
+pydantic
+python-dotenv
