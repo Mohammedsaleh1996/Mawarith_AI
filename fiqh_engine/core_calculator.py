@@ -1,105 +1,110 @@
 from fractions import Fraction
-from typing import List, Dict, Tuple
 import re
+from typing import List, Dict
 
 class Heir:
-    def __init__(self, name: str, share: Fraction, heir_type: str = "فرض"):
+    def __init__(self, name: str, share: Fraction, count: int = 1, heir_type: str = "فرض"):
         self.name = name
         self.share = share
+        self.count = count
         self.type = heir_type
 
 class FaraidCalculator:
     def __init__(self):
-        self.estate = Fraction(1)
+        pass
 
     def parse_heirs(self, text: str) -> List[Dict]:
-        """تحليل نص عربي بسيط إلى ورثة"""
+        """تحليل النص العربي واستخراج الورثة"""
         text = text.strip()
         heirs = []
 
-        # أمثلة بسيطة (يمكن توسيعها)
-        patterns = [
-            (r"زوجة", "زوجة", Fraction(1, 8)),
-            (r"زوج", "زوج", Fraction(1, 4)),
-            (r"أم", "أم", Fraction(1, 6)),
-            (r"أب", "أب", Fraction(1, 6)),
-            (r"بنات? (\d+)", "بنت", lambda m: Fraction(1, 2) if int(m.group(1)) == 1 else Fraction(2, 3)),
-            (r"أولاد? (\d+)", "ابن", lambda m: Fraction(0)),  # عصبة
-        ]
+        # زوج / زوجة
+        if "زوجة" in text:
+            heirs.append({"name": "زوجة", "share": Fraction(1, 8), "count": 1, "type": "فرض"})
+        if "زوج" in text:
+            heirs.append({"name": "زوج", "share": Fraction(1, 4), "count": 1, "type": "فرض"})
 
-        for pattern, name, share in patterns:
-            match = re.search(pattern, text)
-            if match:
-                if callable(share):
-                    s = share(match)
-                else:
-                    s = share
-                heirs.append({"name": name, "share": s, "count": int(match.group(1)) if match.lastindex else 1})
+        # أم / أب
+        if "أم" in text:
+            heirs.append({"name": "أم", "share": Fraction(1, 6), "count": 1, "type": "فرض"})
+        if "أب" in text:
+            heirs.append({"name": "أب", "share": Fraction(1, 6), "count": 1, "type": "فرض"})
 
-        # دعم العصبة (الأولاد)
-        if "ابن" in text or "أولاد" in text:
-            heirs.append({"name": "عصبة (أولاد)", "share": Fraction(0), "type": "عصبة"})
+        # بنات
+        match = re.search(r"(\d+)?\s*بنات?", text)
+        if match:
+            count = int(match.group(1)) if match.group(1) else 1
+            share = Fraction(1, 2) if count == 1 else Fraction(2, 3)
+            heirs.append({"name": "بنت", "share": share, "count": count, "type": "فرض"})
+
+        # أولاد (عصبة)
+        match = re.search(r"(\d+)?\s*أولاد?|ابن", text)
+        if match:
+            count = int(match.group(1)) if match.group(1) else 1
+            heirs.append({"name": "ابن", "share": Fraction(0), "count": count, "type": "عصبة"})
 
         return heirs
 
-    def calculate(self, heirs_list: List[Dict]) -> Dict:
-        """الحساب الرئيسي"""
+    def calculate(self, heirs: List[Dict]) -> Dict:
+        """الحساب الكامل للفرائض + العصبة + العول"""
         total_fixed = Fraction(0)
-        asaba_share = Fraction(0)
+        asaba_count = 0
 
-        for h in heirs_list:
-            if h.get("type") == "عصبة":
-                asaba_share = Fraction(1) - total_fixed
-            else:
+        for h in heirs:
+            if h["type"] == "فرض":
                 total_fixed += h["share"]
+            else:
+                asaba_count = h["count"]
 
-        # العول
+        awl_applied = False
         if total_fixed > 1:
             awl_factor = Fraction(1) / total_fixed
-            for h in heirs_list:
-                if h.get("type") != "عصبة":
+            for h in heirs:
+                if h["type"] == "فرض":
                     h["share"] = h["share"] * awl_factor
-            result = "تم تطبيق **العول**"
-        else:
-            result = "تم الحساب بدون عول"
+            awl_applied = True
+
+        # توزيع العصبة
+        remaining = Fraction(1) - sum(h["share"] for h in heirs if h["type"] == "فرض")
+        if remaining > 0 and asaba_count > 0:
+            for h in heirs:
+                if h["type"] == "عصبة":
+                    h["share"] = remaining
 
         return {
-            "heirs": heirs_list,
-            "total_fixed": total_fixed,
-            "awl_applied": total_fixed > 1,
-            "result": result
+            "heirs": heirs,
+            "awl_applied": awl_applied,
+            "total_fixed_before_awl": total_fixed
         }
 
     def calculate_from_text(self, text: str) -> str:
         """الدالة الرئيسية التي يستدعيها الـ Agent"""
         heirs = self.parse_heirs(text)
         if not heirs:
-            return "لم أتمكن من فهم الورثة في النص. جرب صيغة أوضح مثل: 'زوجة و3 أولاد وبنت وأم'"
+            return "لم أستطع فهم الورثة في النص. جرب صيغة مثل: 'زوجة و3 أولاد وبنت وأم وأب'"
 
-        calc = self.calculate(heirs)
+        result = self.calculate(heirs)
 
-        explanation = f"""
-**نتيجة حساب التركة:**
+        explanation = f"**نتيجة حساب التركة**\n\n{text}\n\n"
 
-{text}
+        if result["awl_applied"]:
+            explanation += "⚠️ **تم تطبيق العول** (التركة مش كفاية)\n\n"
 
-{calc['result']}
+        explanation += "**توزيع الميراث:**\n"
+        for h in result["heirs"]:
+            percentage = float(h["share"]) * 100
+            explanation += f"• {h['name']} ({h['count']}): {h['share']} ≈ {percentage:.2f}%\n"
 
-**الورثة:**
-"""
-        for h in calc['heirs']:
-            explanation += f"- {h['name']}: {float(h['share']):.4f} ({h['share']})\n"
-
-        explanation += f"\n{self.explain_awl() if calc['awl_applied'] else ''}"
+        explanation += "\n" + self.explain_awl()
         return explanation
 
     def explain_awl(self) -> str:
         return """
-**العول** = التركة مش كفاية.
-يعني الورثة عايزين أكتر من اللي موجود، فبنقلل نسبة كل واحد شوية عشان الفلوس تكفي.
-مثال: زوجة + أم + أب → العول بيحصل.
+**العول** يعني: الفلوس اللي سابها المتوفى **مش كفاية** للنسب المستحقة.
+فبنقلل نسبة كل واحد شوية عشان الكل ياخد حاجة.
+مثال: زوجة + أم + أب → غالباً بيحصل فيه عول.
 """
 
 if __name__ == "__main__":
     calc = FaraidCalculator()
-    print(calc.calculate_from_text("زوجة و3 أولاد وبنت وأم"))
+    print(calc.calculate_from_text("زوجة و3 أولاد وبنت وأم وأب"))
